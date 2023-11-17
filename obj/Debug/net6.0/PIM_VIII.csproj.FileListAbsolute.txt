@@ -1,0 +1,8 @@
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.csproj.AssemblyReference.cache
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.AssemblyInfoInputs.cache
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.AssemblyInfo.cs
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.csproj.CoreCompileInputs.cache
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.MvcApplicationPartsAssemblyInfo.cache
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.RazorAssemblyInfo.cache
+D:\Aprendendo\ASP_dotNET_core_MVC\PIM_VIII\obj\Debug\net6.0\PIM_VIII.RazorAssemblyInfo.cs

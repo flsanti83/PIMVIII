@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5lo0zF7Bw0M3bo/wEgwbsLBCQNT63LKgt29PRpJDNRhzoL2yepXwB0jhncDgDuMA2tetYZrVFpu56Y6Bu9Gdcw==",
+  "success": true,
+  "projectFilePath": "D:\\Aprendendo\\ASP_dotNET_core_MVC\\PIM_VIII\\PIM_VIII.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
