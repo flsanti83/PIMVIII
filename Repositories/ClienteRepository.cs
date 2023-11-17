@@ -1,42 +1,44 @@
 ﻿using PIM_VIII.Models;
+using PIM_VIII.Repositories.Interfaces;
 
 namespace PIM_VIII.Repositories
 {
-    public class ClienteRepository
+    public class ClienteRepository<T> : IRepository<T>
     {
         private readonly ApplicationDbContext _context;
+        private T cliente;
 
         public ClienteRepository(ApplicationDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }
 
-        public void Adicionar(Cliente cliente)
+        public void Adicionar(T cliente)
         {
             _context.Clientes.Add(cliente);
             _context.SaveChanges();
         }
 
-        public void Atualizar(Cliente cliente)
+        public void Atualizar(T cliente)
         {
             _context.Clientes.Update(cliente);
             _context.SaveChanges();
         }
 
-        public void Excluir(Cliente cliente)
+        public void Excluir(T cliente)
         {
             _context.Clientes.Remove(cliente);
             _context.SaveChanges();
         }
 
-        public Cliente ObterPorId(int id)
+        public T ObterPorId(int id)
         {
             return _context.Clientes.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<Cliente> ObterTodos()
+        public List<T> ObterTodos()
         {
-            List<Cliente> todosClientes = (List<Cliente>)_context.Clientes;
+            List<T> todosClientes = (List<Cliente>)_context.Clientes;
 
             return todosClientes;
         }
