@@ -1,4 +1,5 @@
-﻿using PIM_VIII.Models;
+﻿using PIM_VIII.Data;
+using PIM_VIII.Models;
 using PIM_VIII.Repositories.Interfaces;
 
 namespace PIM_VIII.Repositories

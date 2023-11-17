@@ -1,11 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PIM_VIII.Context;
 using PIM_VIII.Models;
 using System.Diagnostics;
 
 namespace PIM_VIII.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class HomeController : Controller
     {
+
+        private readonly AppDbContext _context;
+
+        public HomeController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+
+
+
+
+/*
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -28,5 +44,6 @@ namespace PIM_VIII.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+*/
     }
 }
