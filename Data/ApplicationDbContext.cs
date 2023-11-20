@@ -11,5 +11,10 @@
         public DbSet<Carrinho> Carrinhos { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Vendedor> Vendedores { get; set; }
+
+        internal void SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

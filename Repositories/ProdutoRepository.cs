@@ -3,14 +3,8 @@ using PIM_VIII.Models;
 
 namespace PIM_VIII.Repositories
 {
-    public class ProdutoRepository
+    public static class ProdutoRepository
     {
-        private readonly ApplicationDbContext _context;
-
-        public ProdutoRepository(ApplicationDbContext applicationDbContext)
-        {
-            _context = applicationDbContext;
-        }
 
         public static void Adicionar(Produto produto, ApplicationDbContext _context)
         {
@@ -18,24 +12,24 @@ namespace PIM_VIII.Repositories
             _context.SaveChanges();
         }
 
-        public void Atualizar(Produto produto)
+        public static void Atualizar(Produto produto, ApplicationDbContext _context)
         {
             _context.Produtos.Update(produto);
             _context.SaveChanges();
         }
 
-        public void Excluir(Produto produto)
+        public static void Excluir(Produto produto, ApplicationDbContext _context)
         {
             _context.Produtos.Remove(produto);
             _context.SaveChanges();
         }
 
-        public Produto ObterPorId(int id)
+        public static Produto ObterPorId(int id, ApplicationDbContext _context)
         {
             return _context.Produtos.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<Produto> ObterTodos()
+        public static List<Produto> ObterTodos(ApplicationDbContext _context)
         {
             List<Produto> todosProdutos = (List<Produto>)_context.Produtos;
 

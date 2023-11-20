@@ -3,39 +3,33 @@ using PIM_VIII.Models;
 
 namespace PIM_VIII.Repositories
 {
-    public class CarrinhoRepository
+    public static class CarrinhoRepository
     {
-        private readonly ApplicationDbContext _context;
 
-        public CarrinhoRepository(ApplicationDbContext applicationDbContext)
-        {
-            _context = applicationDbContext;
-        }
-
-        public void Adicionar(Carrinho carrinho)
+        public static void Adicionar(Carrinho carrinho, ApplicationDbContext _context)
         {
             _context.Carrinhos.Add(carrinho);
             _context.SaveChanges();
         }
 
-        public void Atualizar(Carrinho carrinho)
+        public static void Atualizar(Carrinho carrinho, ApplicationDbContext _context)
         {
             _context.Carrinhos.Update(carrinho);
             _context.SaveChanges();
         }
 
-        public void Excluir(Carrinho carrinho)
+        public static void Excluir(Carrinho carrinho, ApplicationDbContext _context)
         {
             _context.Carrinhos.Remove(carrinho);
             _context.SaveChanges();
         }
 
-        public Carrinho ObterPorId(int id)
+        public static Carrinho ObterPorId(int id, ApplicationDbContext _context)
         {
             return _context.Carrinhos.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<Carrinho> ObterTodos()
+        public static List<Carrinho> ObterTodos(ApplicationDbContext _context)
         {
             List<Carrinho> todosCarrinhos = (List<Carrinho>)_context.Carrinhos;
 
