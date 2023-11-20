@@ -1,45 +1,43 @@
 ﻿using PIM_VIII.Data;
 using PIM_VIII.Models;
-using PIM_VIII.Repositories.Interfaces;
 
 namespace PIM_VIII.Repositories
 {
-    public class CarrinhoRepository<T> : IRepository<T>
+    public class CarrinhoRepository
     {
         private readonly ApplicationDbContext _context;
-        private T carrinho;
 
         public CarrinhoRepository(ApplicationDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }
 
-        public void Adicionar(T carrinho)
+        public void Adicionar(Carrinho carrinho)
         {
             _context.Carrinhos.Add(carrinho);
             _context.SaveChanges();
         }
 
-        public void Atualizar(T carrinho)
+        public void Atualizar(Carrinho carrinho)
         {
             _context.Carrinhos.Update(carrinho);
             _context.SaveChanges();
         }
 
-        public void Excluir(T carrinho)
+        public void Excluir(Carrinho carrinho)
         {
             _context.Carrinhos.Remove(carrinho);
             _context.SaveChanges();
         }
 
-        public T ObterPorId(int id)
+        public Carrinho ObterPorId(int id)
         {
             return _context.Carrinhos.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<T> ObterTodos()
+        public List<Carrinho> ObterTodos()
         {
-            List<T> todosCarrinhos = (List<Carrinho>)_context.Carrinhos;
+            List<Carrinho> todosCarrinhos = (List<Carrinho>)_context.Carrinhos;
 
             return todosCarrinhos;
         }

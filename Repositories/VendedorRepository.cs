@@ -1,45 +1,43 @@
 ﻿using PIM_VIII.Data;
 using PIM_VIII.Models;
-using PIM_VIII.Repositories.Interfaces;
 
 namespace PIM_VIII.Repositories
 {
-    public class VendedorRepository<T> : IRepository<T>
+    public class VendedorRepository
     {
         private readonly ApplicationDbContext _context;
-        private T vendedor;
 
         public VendedorRepository(ApplicationDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }
 
-        public void Adicionar(T vendedor)
+        public void Adicionar(Vendedor vendedor)
         {
             _context.Vendedores.Add(vendedor);
             _context.SaveChanges();
         }
 
-        public void Atualizar(T vendedor)
+        public void Atualizar(Vendedor vendedor)
         {
             _context.Vendedores.Update(vendedor);
             _context.SaveChanges();
         }
 
-        public void Excluir(T vendedor)
+        public void Excluir(Vendedor vendedor)
         {
             _context.Vendedores.Remove(vendedor);
             _context.SaveChanges();
         }
 
-        public T ObterPorId(int id)
+        public Vendedor ObterPorId(int id)
         {
             return _context.Vendedores.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<T> ObterTodos()
+        public List<Vendedor> ObterTodos()
         {
-            List<T> todosVendedores = (List<Vendedor>)_context.Vendedores;
+            List<Vendedor> todosVendedores = (List<Vendedor>)_context.Vendedores;
 
             return todosVendedores;
         }
